@@ -40,9 +40,13 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "rest_framework",
     "users",
     "ads",
+    "redoc",
+    "drf_yasg",
+    "corsheaders",
+    "djoser",
+    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
@@ -56,7 +60,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "skymarket.urls"
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "skymarket.wsgi.application"
+WSGI_APPLICATION = 'config.wsgi.application'
 
 REST_FRAMEWORK = {
     # Авторизация JWT tokens
