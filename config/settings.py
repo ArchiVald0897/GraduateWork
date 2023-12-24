@@ -42,12 +42,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "users",
-    "ads",
-    "redoc",
-    "drf_yasg",
-    "corsheaders",
-    "djoser",
-    "rest_framework_simplejwt",
 ]
 
 MIDDLEWARE = [
