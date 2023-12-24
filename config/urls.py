@@ -20,23 +20,23 @@ schema_view = get_schema_view(
     permission_classes=(permissions.AllowAny,),
 )
 
-# urlpatterns = [
-#     # Admin Panel
-#     path("api/admin/", admin.site.urls),
-#     # Tasks
-#     path("api/redoc-tasks/", include("redoc.urls")),
-#
-#     # Applications
-#     path('api/users/', include('users.urls')),
-#     path('api/', include('ads.urls')),
-#
-#     # Authorise Tokens
-#     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-#     path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-#
-#     # Документация Swagger and Redoc
-#     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
-#     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
-#     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
-# ]
-# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns = [
+    # Admin Panel
+    path("api/admin/", admin.site.urls),
+    # Tasks
+    path("api/redoc-tasks/", include("redoc.urls")),
+
+    # Applications
+    path('api/users/', include('users.urls')),
+    path('api/', include('ads.urls')),
+
+    # Authorise Tokens
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('api/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
+    # Документация Swagger and Redoc
+    path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
+    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
+    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
+]
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
